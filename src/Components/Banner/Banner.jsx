@@ -7,14 +7,24 @@ const Banner = () => {
 
 
     return (
-        <div className="carousel h-[600px] rounded-lg w-full mt-2 lg:mt-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.9))]">
+        <div
+            data-aos="zoom-in-up" data-aos-duration="1500"
+            className="carousel h-[600px] rounded-lg w-full mt-2 lg:mt-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.9))]">
             <div id="slide1" className="carousel-item relative w-full bg-[linear-gradient(90deg,#151515,rgba(21,21,21,0.00)),url(https://i.postimg.cc/xjH67Lsc/1.jpg)] bg-no-repeat bg-cover bg-center">
                 <div className='text-white w-[512px] flex flex-col justify-center ml-24 gap-8'>
-                    <h1 className='text-6xl font-bold'>Affordable Price For Car Servicing</h1>
-                    <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
-                    <div className='flex  gap-8'>
+                    <h1
+                        data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
+                        className='text-6xl font-bold'>Affordable Price For Car Servicing
+                    </h1>
+                    <p
+                        data-aos="fade-right"
+                        data-aos-delay="700" data-aos-duration="1000"
+                    >There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
+                    <div 
+                    data-aos='zoom-in-up' data-aos-delay="800" data-aos-duration="1000"
+                    className='flex  gap-8'>
                         <Button btnName={"Discover More"} customStyle={"bg-[#FF3811] hover:bg-transparent hover:text-[#FF3811] text-white"} />
-                         <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
+                        <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
                     </div>
                 </div>
                 <CarouserBtn prev={"#slide4"} next={"#slide2"} />
@@ -25,7 +35,7 @@ const Banner = () => {
                     <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                     <div className='flex  gap-8'>
                         <Button btnName={"Discover More"} customStyle={"bg-[#FF3811] hover:bg-transparent hover:text-[#FF3811] text-white"} />
-                         <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
+                        <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
                     </div>
                 </div>
                 <CarouserBtn prev={"#slide1"} next={"#slide3"} />
@@ -36,7 +46,7 @@ const Banner = () => {
                     <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                     <div className='flex  gap-8'>
                         <Button btnName={"Discover More"} customStyle={"bg-[#FF3811] hover:bg-transparent hover:text-[#FF3811] text-white"} />
-                         <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
+                        <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
                     </div>
                 </div>
                 <CarouserBtn prev={"#slide2"} next={"#slide4"} />
@@ -47,7 +57,7 @@ const Banner = () => {
                     <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                     <div className='flex  gap-8'>
                         <Button btnName={"Discover More"} customStyle={"bg-[#FF3811] hover:bg-transparent hover:text-[#FF3811] text-white"} />
-                         <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
+                        <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
                     </div>
                 </div>
                 <CarouserBtn prev={"#slide3"} next={"#slide5"} />
@@ -58,7 +68,7 @@ const Banner = () => {
                     <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                     <div className='flex  gap-8'>
                         <Button btnName={"Discover More"} customStyle={"bg-[#FF3811] hover:bg-transparent hover:text-[#FF3811] text-white"} />
-                         <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
+                        <Button customStyle={"hover:bg-[#FF3811] hover:text-white"} btnName={"Latest Project"} />
                     </div>
                 </div>
                 <CarouserBtn prev={"#slide5"} next={"#slide6"} />
