@@ -4,7 +4,7 @@ import NavBar from '../../Components/NavBar/NavBar';
 
 const Layout = () => {
     return (
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl mx-auto font-common-font'>
             <NavBar/>
             <Outlet/>
             

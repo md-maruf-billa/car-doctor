@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      "common-font":"Inter"
+    }
   },
   plugins: [require('daisyui')],
 }
