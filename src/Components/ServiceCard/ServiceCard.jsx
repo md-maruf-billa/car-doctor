@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({service}) => {
-    const {title,img,price} = service;
+    const {_id,title,img,price} = service;
     return (
         <div 
         data-aos="zoom-in-up" data-aos-duration="1000"
@@ -14,7 +15,7 @@ const ServiceCard = ({service}) => {
             </div>
             <div className='flex justify-between text-[#FF3811] text-xl'>
                 <h3>Price: ${price}</h3>
-                <FaArrowRight className='cursor-pointer'/>
+                <Link state={_id} to={`details/${_id}`}><FaArrowRight className='cursor-pointer'/></Link>
             </div>
         </div>
     );

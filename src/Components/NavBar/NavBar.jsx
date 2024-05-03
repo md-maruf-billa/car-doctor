@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 import Button from '../../Utils/Button/Button';
 import { SlHandbag } from "react-icons/sl";
 import { IoSearchOutline } from "react-icons/io5";
+import { UserContext } from '../../Pages/ContextProvider/ContextProvider';
+import Swal from 'sweetalert2';
 
 const NavBar = () => {
+    // ------------------get current user in context-------------
+    const { currentUser,logOutUser } = useContext(UserContext);
+    const handelLogOut = ()=>{
+        logOutUser()
+        .then(res=>{
+            
+            Swal.fire({
+                title: "Successful",
+                text: "You are logged out",
+                icon: "success"
+              });
+        })
+        .catch(error =>{
+            Swal.fire({
+                title: "Log out Failed",
+                text: `${error.message}`,
+                icon: "error"
+              });
+        })
+    }
+
+
     const navItems = <>
         <NavLink to={"/"}><li><a>Home</a></li></NavLink>
         <NavLink to={"/about"}><li><a>About</a></li></NavLink>
@@ -39,9 +63,21 @@ const NavBar = () => {
                     <SlHandbag />
                     <IoSearchOutline />
                 </div>
-                <Button btnName={"Appointment"} />
+                {currentUser.metadata ?
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img alt="Tailwind CSS Navbar component" src={currentUser.photoURL || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+                            </div>
+                        </div>
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li> Profile </li>
+                            <li onClick={handelLogOut}><a>Logout</a></li>
+                        </ul>
+                    </div> : <Link to={"/login"}><Button btnName={"Login"} /></Link>}
             </div>
         </div>
+
     );
 };
 
